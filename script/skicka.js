@@ -7,13 +7,9 @@ const subject = document.querySelector('#subject');
 const email = document.querySelector('#email');
 const message = document.querySelector('#message');
 
-
-
-// Handle submit
 const handleSubmit = e => {
     e.preventDefault();
 
-    // Form validation
   const subject = document.querySelector('#subject');
   const email = document.querySelector('#email');
   const message = document.querySelector('#message');
@@ -67,7 +63,6 @@ const handleSubmit = e => {
       return setSuccess(message.parentElement)
   }
   }
-
 
   const validateCheckbox = () => {
   if (!checkbox.checked) {
@@ -144,14 +139,12 @@ const handleSubmit = e => {
   email.value = "";
   message.value = "";
 
-  // Moves the user to the errands page after submit (just for to make it easier to see what is happening right away)
   setTimeout(() => {
     window.location.replace("ärenden.html")
   }, "400")
 
   setTimeout();
   
-// Catch error - output error message
 }
 catch(err) {
   console.log(err);

@@ -11,7 +11,6 @@ const COMMENT_URL = 'https://fnd22-shared.azurewebsites.net/api/Comments';
 
 const output = document.querySelector('#output');
 
-// ___________________________________________________________Create details card______________________________________________________________
 
 const getPost = async () => {
   
@@ -21,7 +20,6 @@ const getPost = async () => {
 
     if(res.ok){
       console.log(res)
-      //Lägg till ett nytt element i output
       output.appendChild(createCardElement(post))
     }
     else{
@@ -38,8 +36,6 @@ const getPost = async () => {
   } 
 }
 getPost()
-
-// ___________________________________________________________Create details card______________________________________________________________
 
 const createCardElement = (post) => {
   const cardDetails = document.createElement('div')
@@ -75,7 +71,6 @@ const createCardElement = (post) => {
   email.innerText = post.email
 
 
-  // ADD DIV FOR STATUS
   const statusSection = document.createElement('div')
   statusSection.classList.add('statusSection');
 
@@ -88,7 +83,6 @@ const createCardElement = (post) => {
 
   
 
-  // Status color
   const statusColor = document.createElement('div')
     statusColor.classList.add('statusColor')
 
@@ -104,16 +98,13 @@ const createCardElement = (post) => {
     
   cardDetails.appendChild(statusSection)
   statusSection.appendChild(statusColor)
-  // ADD INPUT FORM TO DETAILS CARD
   const detailsForm = document.createElement('form')
   detailsForm.setAttribute("id", "detailsForm");
   detailsForm.className = 'details_form'
 
-   // ADD DIV FOR RADIO BUTTONS
    const radioSection = document.createElement('div')
    radioSection.classList.add('radioSection');
 
-   // Status not started
    const statusNotStarted = document.createElement('INPUT')
    statusNotStarted.setAttribute("type", "radio");
    statusNotStarted.setAttribute("name", "status");
@@ -122,7 +113,6 @@ const createCardElement = (post) => {
    statusNotStarted.setAttribute("checked", "checked");
    statusNotStarted.classList.add('statusRadio')
 
-   // Status pending
    const statusPending = document.createElement('INPUT')
    statusPending.setAttribute("type", "radio");
    statusPending.setAttribute("name", "status");
@@ -130,7 +120,6 @@ const createCardElement = (post) => {
    statusPending.setAttribute("id", "pending");
    statusPending.classList.add('statusRadio')
 
-   // Status done
    const statusDone = document.createElement('INPUT')
    statusDone.setAttribute("type", "radio");
    statusDone.setAttribute("name", "status");
@@ -139,19 +128,16 @@ const createCardElement = (post) => {
    statusDone.classList.add('statusRadio')
 
   
-   // Add Comment text input
   let comment = document.createElement('INPUT')
   comment.setAttribute("type", "text");
   comment.setAttribute("id", "comment");
   comment.classList.add('textInput');
 
-   // Add mail text input
    let commentEmail = document.createElement('INPUT')
    commentEmail.setAttribute("type", "text");
    commentEmail.setAttribute("id", "commentEmail");
    commentEmail.classList.add('textInput');
 
-  //  Add submit button to details form
   let detailsSubmit = document.createElement('button');
   detailsSubmit.setAttribute("name", "btb-d-submit");
   detailsSubmit.setAttribute("value", "submitDetails");
@@ -160,7 +146,6 @@ const createCardElement = (post) => {
   detailsSubmit.classList.add('cardButtons')
   detailsSubmit.classList.add('btnSubmitDetails');
 
-  //  Add close button to details card
   let btnCloseDetails = document.createElement('button');
   btnCloseDetails.setAttribute("name", "close-details");
   btnCloseDetails.setAttribute("id", "btn-close-details");
@@ -170,7 +155,6 @@ const createCardElement = (post) => {
   btnCloseDetails.classList.add('btnCloseDetails');
 
 
-  // Display everything on the card
   cardDetails.appendChild(cardHeader)
   cardHeader.appendChild(subject)
   cardHeader.appendChild(time)
@@ -185,19 +169,16 @@ const createCardElement = (post) => {
   statusSection.appendChild(statusColor)
   statusSection.appendChild(status)
 
-    // Sort comments function
   post.comments.forEach(e => {
     return post.comments.sort((a, b) => {
     return new Date(b.created) - new Date(a.created);
     })
   })
 
-  // Push comments to a sorted array of comments
   post.comments.forEach(comment => {
     sortedComments.push(comment)
   })
 
-//   Print out sorted comments array
   sortedComments.forEach(data => {
 
     cardDetails.innerHTML += `
@@ -208,7 +189,6 @@ const createCardElement = (post) => {
 
   })
 
-  // Display radio section
   radioSection.innerHTML += `<h4>Ändra status:</h4>`
   radioSection.innerHTML += `<p>Ej påbörjad:</p>`
   radioSection.appendChild(statusNotStarted)
@@ -217,7 +197,6 @@ const createCardElement = (post) => {
   radioSection.innerHTML += `<p>Klar:</p>`
   radioSection.appendChild(statusDone)
 
-  // Add heading, comment input, radioSection & submit btn to detailsForm
   detailsForm.innerHTML += `<h4>Komentera:</h4>`
   detailsForm.appendChild(comment)
   detailsForm.innerHTML += `<h5>Email:</h5>`
@@ -225,29 +204,21 @@ const createCardElement = (post) => {
   detailsForm.appendChild(radioSection)
   detailsForm.appendChild(detailsSubmit)
   
-  // Add detailsForm to card
   cardDetails.appendChild(detailsForm)
   cardDetails.appendChild(btnCloseDetails)
 
-  // Add event listener to the comment form
-  // btnCloseDetails.addEventListener('click', href="errands.html")
   detailsForm.addEventListener('Skicka', commentSubmit)
   return cardDetails
 }
 
 
-// ___________________________________________________________Handle submit______________________________________________________________
-// Handle submit
 const commentSubmit = e => {
-  // prevent reload
   e.preventDefault()
 
   console.log(e.target.comment.value);
   console.log(e.target);
 
-  // declair variables
   let statusID = 0;
-  // let comment = "";
 
   console.log(commentEmail)
   commentEmail = e.target.commentEmail.value
@@ -255,32 +226,25 @@ const commentSubmit = e => {
   comment = e.target.comment.value
     
 
-  // Check what to change status ID into
-  // if status: not started
   if(e.target.notStarted.checked){
     console.log("Status: Ej påbörjad")
     statusID = 1;
   }
-  // if status: pending
   else if(e.target.pending.checked){
     console.log("Status: pågående")
     statusID = 2;
   }
-  // if status done
   else if(e.target.done.checked){
     console.log("Status: klar")
     statusID = 3;
   }
   
-// __________________________________________________________Change ID______________________________________________________________
 
-  // Info to change status ID
   let changeID = {
     id: id,
     statusID: statusID,
   }
 
-  // Options for fetch method
   let options = {
     method: "PUT",
     headers: {
@@ -289,22 +253,17 @@ const commentSubmit = e => {
     body: JSON.stringify(changeID)
   }
 
-  // Try to change status id
   try{
     fetch(BASE_URL+id, options)
     .then((idRes) => console.log(idRes))
 
-    // __________________________________________________________Post comment______________________________________________________________
-    // If there is a comment it will be added aswell, if not - only status will change (reason for nesting)
 
-    // Comment post payload - CONTENT TO POST
     const addComment = {
       caseID: id,
       email: document.querySelector('#commentEmail').value,
       message: comment,
     }
 
-    // Options for fetch method
     let commentOptions = {
       method: "POST",
       headers: {
@@ -320,8 +279,6 @@ const commentSubmit = e => {
       console.log("Lägg till Email!")
     }
     else{
-      // If status change is successful
-      // Try to add comment
       try{
         fetch(COMMENT_URL, commentOptions)
         .then((commentRes) => console.log(commentRes))
@@ -329,8 +286,6 @@ const commentSubmit = e => {
         document.querySelector('.textInput').value = "";
         document.querySelector('#commentEmail').value = "";
 
-        // Reloads the page after the comment to show the comment just added
-        // Remove to see response (reload necessary to see the status change on DOM)
         setTimeout(() => {
           window.location.reload();
         }, "400")
@@ -339,7 +294,6 @@ const commentSubmit = e => {
 
       } 
 
-      // Catch error - output error message
       catch(err) {
         console.log(err);
         output.innerHTML += `
@@ -350,7 +304,6 @@ const commentSubmit = e => {
       } 
     }
 
-   // Catch error - output error message
   }
   catch(err) {
     console.log(err);

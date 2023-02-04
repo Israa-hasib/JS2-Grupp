@@ -6,31 +6,25 @@ const output = document.querySelector('#output');
 
 const getPosts = async () => {
   
-  // Try to fetch
   try {
     const res = await fetch(BASE_URL)
     const posts = await res.json()
     console.log(res)
 
-    // Function to sort posts
     const sortPosts = (posts) => {
       return posts.sort((a, b) => {
         return new Date(b.created) - new Date(a.created);
       });
     }
-    // Skickar posts genom sortPosts funktionen och sparar i errands arrayen
     errands = sortPosts(posts);
 
     console.log(errands)
-    // För varje post i sortedPosts
     errands.forEach(post => {
  
-      //Skicka med posten och skapa ett nytt card element som är child till output
       output.appendChild(createCardElement(post))
     })
   }
 
-  // Catch error - output error message
   catch(err) {
     console.log(err);
     output.innerHTML += `
@@ -43,13 +37,10 @@ const getPosts = async () => {
 
 getPosts()
 
-
-// Create a new card element with the info from each post of sortedPosts
 const createCardElement = (post) => {
   const cardListErrands = document.createElement('a')
   cardListErrands.className = 'cardListErrands'
 
-  // card.href = `details.html?id=${post.id}`
   cardListErrands.setAttribute('href', `detaljer.html?id=${post.id}`)
 
   const cardHeader = document.createElement('div')
@@ -81,7 +72,6 @@ const createCardElement = (post) => {
   const email = document.createElement('p')
   email.innerText = post.email
 
-  // ADD DIV FOR STATUS
   const statusSection = document.createElement('div')
   statusSection.classList.add('statusSection');
   
@@ -92,7 +82,6 @@ const createCardElement = (post) => {
   status.classList.add('errand_status')
   status.innerText = post.status.statusName
 
-  // Status color
   const statusColor = document.createElement('div')
     statusColor.classList.add('statusColor')
 
@@ -108,16 +97,13 @@ const createCardElement = (post) => {
     
   cardListErrands.appendChild(statusSection)
   statusSection.appendChild(statusColor)
-  // ADD INPUT FORM TO DETAILS CARD
   const detailsForm = document.createElement('form')
   detailsForm.setAttribute("id", "detailsForm");
   detailsForm.className = 'details_form'
 
-   // ADD DIV FOR RADIO BUTTONS
    const radioSection = document.createElement('div')
    radioSection.classList.add('radioSection');
 
-   // Status not started
    const statusNotStarted = document.createElement('INPUT')
    statusNotStarted.setAttribute("type", "radio");
    statusNotStarted.setAttribute("name", "status");
@@ -126,7 +112,6 @@ const createCardElement = (post) => {
    statusNotStarted.setAttribute("checked", "checked");
    statusNotStarted.classList.add('statusRadio')
 
-   // Status pending
    const statusPending = document.createElement('INPUT')
    statusPending.setAttribute("type", "radio");
    statusPending.setAttribute("name", "status");
@@ -134,7 +119,6 @@ const createCardElement = (post) => {
    statusPending.setAttribute("id", "pending");
    statusPending.classList.add('statusRadio')
 
-   // Status done
    const statusDone = document.createElement('INPUT')
    statusDone.setAttribute("type", "radio");
    statusDone.setAttribute("name", "status");
@@ -143,19 +127,16 @@ const createCardElement = (post) => {
    statusDone.classList.add('statusRadio')
 
   
-   // Add Comment text input
   let comment = document.createElement('INPUT')
   comment.setAttribute("type", "text");
   comment.setAttribute("id", "comment");
   comment.classList.add('textInput');
 
-   // Add mail text input
    let commentEmail = document.createElement('INPUT')
    commentEmail.setAttribute("type", "text");
    commentEmail.setAttribute("id", "commentEmail");
    commentEmail.classList.add('textInput');
 
-  //  Add submit button to details form
   let detailsSubmit = document.createElement('button');
   detailsSubmit.setAttribute("name", "btb-d-submit");
   detailsSubmit.setAttribute("value", "submitDetails");
@@ -164,7 +145,6 @@ const createCardElement = (post) => {
   detailsSubmit.classList.add('cardButtons')
   detailsSubmit.classList.add('btnSubmitDetails');
 
-  //  Add close button to details card
   let btnCloseDetails = document.createElement('button');
   btnCloseDetails.setAttribute("name", "close-details");
   btnCloseDetails.setAttribute("id", "btn-close-details");
@@ -174,7 +154,6 @@ const createCardElement = (post) => {
   btnCloseDetails.classList.add('btnCloseDetails');
 
 
-  // Display everything on the card
   cardListErrands.appendChild(cardHeader)
   cardHeader.appendChild(subject)
   cardHeader.appendChild(time)
