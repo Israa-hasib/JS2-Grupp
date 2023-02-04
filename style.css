@@ -1,0 +1,671 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(221, 221, 221);
+    padding-bottom: 4rem;
+  }
+  
+  header {
+    width: 100%;
+    border-bottom: 1px solid rgb(192, 192, 192);
+  }
+  header .down-header {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+  }
+  header .down-header .company-name {
+    width: auto;
+    height: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  header .down-header .company-name h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+  header .down-header .down-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .down-header .down-navbar ul li {
+    align-self: center;
+    display: inline;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  header .down-header .down-navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+  }
+  header .down-header .down-navbar ul li ahover {
+    text-decoration: underline;
+  }
+  header .down-header .down-navbar ul li .active {
+    text-decoration: underline;
+  }
+  
+  
+  .main-page {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .content {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .background {
+    background-image: linear-gradient(rgba(228, 222, 222, 0.065), rgba(255, 255, 255, 0.5)), url("/images/vvs.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+  }
+  .background h2 {
+    font-size: 4.5em;
+    text-align: center;
+    padding-top: 10rem;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+  }
+  
+  .content-row-one {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .content-row-one .row-one-box {
+    width: 100%;
+    min-height: 23rem;
+    max-height: auto;
+    align-self: center;
+    margin: 1rem 4rem 0rem 4rem;
+    padding-right: 1rem;
+  }
+  .content-row-one .row-one-box h3 {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+  .content-row-one .row-one-box p {
+    padding-top: 2rem;
+    text-align: center;
+  }
+  
+  .row-image {
+    background-color: yellow;
+    background-image: url("/images/vvs.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+  
+  .content-row-two {
+    height: 45rem;
+    width: 100%;
+    background-color: rgb(53, 176, 233);
+    display: flex;
+    justify-content: center;
+  }
+  .content-row-two .row-two-box {
+    width: 80%;
+    height: 38rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .content-row-two .row-two-box .box-row {
+    width: 48%;
+    height: 100%;
+  }
+  .content-row-two .row-two-box .box-row h4 {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+  }
+  .content-row-two .row-two-box .box-row p {
+    font-size: 3rem;
+    color: white;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .content-row-two .row-two-box .box-row .fa-solid {
+    color: rgb(58, 235, 58);
+  }
+  .content-row-two .row-two-box .box-row-card {
+    width: 35%;
+    height: 100%;
+    border: 1px solid rgb(64, 63, 63);
+    background-color: rgb(253, 245, 245);
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgb(64, 63, 63);
+    display: flex;
+    flex-direction: column;
+  }
+  .content-row-two .row-two-box .box-row-card h4 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 0.7rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 3px black;
+    color: white;
+  }
+  .content-row-two .row-two-box .box-row-card p {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+  }
+  .content-row-two .row-two-box .box-row-card input {
+    width: 80%;
+    height: 3rem;
+    align-self: center;
+    margin-top: 3rem;
+    border-radius: 8px;
+    border: 1px solid gray;
+    font-size: 1.5rem;
+  }
+  .content-row-two .row-two-box .box-row-card button {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px;
+    background-color: rgb(62, 62, 62);
+    align-self: center;
+    margin-top: 2rem;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .about-main {
+    width: 80%;
+    margin: auto;
+  }
+  .about-main h1 {
+    font-size: 48px;
+    padding-top: 3rem;
+  }
+  .about-main .about-text-wrapper {
+    display: flex;
+    height: 100vh;
+  }
+  .about-main .about-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+  }
+  .about-main .about-right {
+    flex: 1;
+  }
+  .about-main .about-right .about-div {
+    padding-top: 3rem;
+  }
+  .about-main .about-div {
+    width: 90%;
+  }
+  .about-main .about-div h2 {
+    font-size: 30px;
+    color: rgb(40, 49, 148);
+    padding-bottom: 1rem;
+  }
+  .about-main .about-div p {
+    font-size: 16px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .content-wrapper .iframe-wrapper {
+    width: 100%;
+    height: 50vh;
+  }
+  .content-wrapper .iframe-wrapper .iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .content-wrapper .contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+  }
+  .content-wrapper .contact-info-wrapper .contact-info-main-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 100%;
+    margin: 1rem 0 1rem 0;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3764705882);
+  }
+  .content-wrapper .contact-info-wrapper .contact-info-main-box .contact-info-left-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 1rem 0 0 1rem;
+  }
+  .content-wrapper .contact-info-wrapper .contact-info-main-box .contact-info-left-box .content-info-left-box-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+  }
+  .content-wrapper .contact-info-wrapper .contact-info-main-box .contact-info-left-box .content-info-left-box-inner .content-info-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    margin-left: 4rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.322);
+  }
+  .content-wrapper .contact-info-wrapper .contact-info-main-box .contact-info-left-box .content-info-left-box-inner .content-info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .content-wrapper .contact-info-wrapper .contact-info-main-box .contact-info-right-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(235deg, 57%, 37%);
+    color: #fff;
+    border-radius: 0 1rem 1rem 0;
+  }
+  
+  .conact-form-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: none;
+    max-width: 40em;
+    min-height: 35em;
+    max-height: 35em;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d8d8d8;
+    height: 100%;
+    width: 50%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  .conact-form-wrap .form-content {
+    width: 100%;
+    height: 100%;
+  }
+  .conact-form-wrap input,
+  .conact-form-wrap textarea {
+    font-size: 0.8rem;
+    outline: none;
+  }
+  .conact-form-wrap .input-group-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .conact-form-wrap .input-group {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .conact-form-wrap .input-group label {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  .conact-form-wrap .input-group2 {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .conact-form-wrap .input-group3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  .conact-form-wrap .input-group4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  .conact-form-wrap .radio-text,
+  .conact-form-wrap .terms-text {
+    padding-left: 0.25rem;
+  }
+  .conact-form-wrap .input-label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .conact-form-wrap .form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d8d8d8;
+    background-color: rgb(245, 245, 245);
+    box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5);
+  }
+  .conact-form-wrap .form-control2 {
+    width: 100%;
+    height: 10vh;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d8d8d8;
+    background-color: rgb(245, 245, 245);
+    box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5);
+  }
+  .conact-form-wrap .btn-submit {
+    width: 100%;
+    padding: 0.8em 1.4em;
+    border-radius: 0.5rem;
+    border: 0;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .conact-form-wrap .btn-primary {
+    background-color: hsl(202deg, 95%, 46%);
+    color: #fff;
+    transition: background 70ms;
+  }
+  .conact-form-wrap .btn-primary:hover,
+  .conact-form-wrap .btn-primary:focus {
+    background-color: hsl(202deg, 95%, 51%);
+  }
+  .conact-form-wrap .btn-primary:active {
+    background-color: hsl(202deg, 95%, 41%);
+  }
+  .conact-form-wrap h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .error {
+    outline: 1px solid red;
+    border-radius: 0.5rem;
+  }
+  
+  .success {
+    outline: none;
+  }
+  
+  #output h2 {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  #output .cardListErrands {
+    display: block;
+    background-color: #fff;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2235294118);
+    border-radius: 1rem;
+    padding: 3rem 4rem;
+    width: 50vw;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  #output .cardListErrands p {
+    margin-bottom: 1rem;
+  }
+  #output .cardListErrands .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.705);
+    margin-bottom: 2rem;
+  }
+  #output .cardListErrands .cardHeader h3 {
+    font-size: 1.5rem;
+  }
+  #output .cardListErrands .cardHeader p {
+    font-weight: bold;
+    margin-top: 9px;
+  }
+  #output .cardListErrands .messageDiv, #output .cardListErrands .mailDiv, #output .cardListErrands .statusSection {
+    display: flex;
+  }
+  #output .cardListErrands .messageDiv p, #output .cardListErrands .mailDiv p, #output .cardListErrands .statusSection p {
+    margin-right: 0.5rem;
+  }
+  #output .cardListErrands .statusSection {
+    display: flex;
+    border-bottom: 1px solid rgb(99, 99, 99);
+    padding-bottom: 1rem;
+  }
+  #output .cardListErrands .statusSection p {
+    margin-right: 0.5rem;
+  }
+  #output .cardListErrands .statusSection .statusColor {
+    position: relative;
+    top: 6px;
+    margin-right: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+  }
+  #output .cardListErrands .statusSection .green {
+    background-color: green;
+  }
+  #output .cardListErrands .statusSection .yellow {
+    background-color: yellow;
+  }
+  #output .cardListErrands .statusSection .red {
+    background-color: red;
+  }
+  #output .errand_subject {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  #output .errand_message,
+  #output .errand_email {
+    font-size: 0.7em;
+  }
+  #output .errand_name,
+  #output .errand_message,
+  #output .errand_email {
+    pointer-events: none;
+  }
+  #output .details {
+    width: 100%;
+    height: 60vh;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+    padding: 2rem;
+  }
+  #output .details h3 {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+  #output .details p {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  #output .statusPending {
+    margin-left: 1rem;
+  }
+  #output .statusDone {
+    margin-left: 1rem;
+  }
+  
+  #output h2 {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  #output .cardDetails {
+    display: block;
+    background-color: #fff;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2235294118);
+    border-radius: 1rem;
+    padding: 3rem 4rem;
+    width: 50vw;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 4rem;
+  }
+  #output .cardDetails p {
+    margin-bottom: 1rem;
+  }
+  #output .cardDetails .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.705);
+    margin-bottom: 2rem;
+  }
+  #output .cardDetails .cardHeader h3 {
+    font-size: 1.5rem;
+  }
+  #output .cardDetails .cardHeader p {
+    font-weight: bold;
+    margin-top: 9px;
+  }
+  #output .cardDetails .messageDiv, #output .cardDetails .mailDiv, #output .cardDetails .statusSection {
+    display: flex;
+  }
+  #output .cardDetails .messageDiv p, #output .cardDetails .mailDiv p, #output .cardDetails .statusSection p {
+    margin-right: 0.5rem;
+  }
+  #output .cardDetails .statusSection {
+    display: flex;
+    border-bottom: 1px solid rgb(99, 99, 99);
+    padding-bottom: 0.5rem;
+    margin-bottom: 3rem;
+  }
+  #output .cardDetails .statusSection p {
+    margin-right: 0.5rem;
+  }
+  #output .cardDetails .statusSection .statusColor {
+    position: relative;
+    top: 6px;
+    margin-right: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+  }
+  #output .cardDetails .statusSection .green {
+    background-color: green;
+  }
+  #output .cardDetails .statusSection .yellow {
+    background-color: yellow;
+  }
+  #output .cardDetails .statusSection .red {
+    background-color: red;
+  }
+  #output .cardDetails .details_form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+  #output .cardDetails .details_form .textInput {
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    border-style: none;
+    box-shadow: inset 0.5px 0.5px 2.5px #000;
+  }
+  #output .cardDetails .details_form .textInput:focus {
+    border: transparent;
+    border-style: none;
+  }
+  #output .cardDetails .details_form .radioSection {
+    display: flex;
+    flex-direction: row;
+  }
+  #output .cardDetails .details_form .radioSection h4 {
+    margin-top: 12px;
+  }
+  #output .cardDetails .details_form .radioSection p {
+    margin-top: 12px;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+  }
+  #output .cardDetails .details_form .btnSubmitDetails:hover {
+    background-color: rgba(21, 128, 0, 0.5);
+  }
+  #output .cardDetails .details_form .btnSubmitDetails:active {
+    background-color: rgb(21, 128, 0);
+  }
+  #output .cardDetails .cardButtons {
+    background-color: rgba(17, 26, 91, 0.137);
+    height: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    font-weight: bold;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.76);
+    transition: all 300ms ease;
+    margin-top: 1rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  #output .cardDetails .cardButtons:active {
+    box-shadow: 1px 1px 2px #000;
+  }
+  #output .cardDetails .btnCloseDetails:hover {
+    background-color: rgba(190, 0, 0, 0.5);
+  }
+  #output .cardDetails .btnCloseDetails:active {
+    background-color: rgb(190, 0, 0);
+  }
+  

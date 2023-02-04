@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-page" id="main-page">
+        <header class="header" id="header">
+            <div class="down-header" id="down-header">
+                <div class="company-name">
+                </div>
+                <nav class="down-navbar">
+                    <ul>
+                        <li><a class="active" href="skicka.html">Support</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="active" href="ärenden.html">Ärenden</a></li>
+                    </ul>
+                </nav>
+            </div> 
+        </header>
+
+        <main>
+            <div class="conact-form-wrap">
+                <form id="form" class="form-content">
+                    <h1>Välkommen</h1>
+                    <h2>Hur kan vi stå till tjänst?</h2>
+
+                    <div class="input-group-wrap">
+                        <div class="input-group">
+                            <label for="subject" class="input-label"></label>
+                            <input type="text" placeholder="Ämne:" id="subject" class="form-control">
+                        </div>
+                    </div>
+                    <div class="input-group-wrap">
+                        <div class="input-group2">
+                            <label for="email" class="input-label"></label>
+                            <input id="email" type="email" placeholder="Email:" id="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="input-group2">
+                        <label for="message" class="input-label"></label>
+                        <textarea type="text" id="message" placeholder="Din Fråga:" class="form-control2"></textarea>
+                    </div>
+
+                    <div class="input-group3">
+                        <input id="checkbox" type="checkbox" name="box">
+                        <label class="terms-text">Accept terms and conditions</label>
+                    </div>
+                    <div>
+                        <button id="submit" class="btn-submit btn-primary">Skicka</button>
+                    </div>
+                    <div class="text-out">
+                    </div>
+                </form>
+            </div>
+        </main>
+
+       
+    </div>
+
+    <script src="script/skicka.js"></script>
+</body>
+
+</html>
